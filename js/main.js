@@ -2,6 +2,8 @@ const body = document.body;
 const toggleButtons = document.querySelectorAll(".theme-toggle");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const copyButtons = document.querySelectorAll("[data-copy]");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
 
 const storedTheme = localStorage.getItem("theme");
 if (storedTheme) {
@@ -64,3 +66,19 @@ copyButtons.forEach((button) => {
     }
   });
 });
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 720) {
+        navLinks.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+}
