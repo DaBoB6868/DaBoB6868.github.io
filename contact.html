@@ -7,50 +7,70 @@
     <title>Spencer Hicks</title>
   </head>
   <body>
-
-  <nav>
-    <p>Spencer Hicks</p>
-    <a href="index.html">About Spencer Hicks</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <nav class="site-nav">
+    <div class="brand">
+      <span class="brand-mark">SH</span>
+      <span>Spencer Hicks</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#honors">Honors</a>
+      <a href="index.html#skills">Skills</a>
+      <button class="theme-toggle" type="button" aria-pressed="false">Theme</button>
+    </div>
   </nav>
 
-  <h1>Spencer Hicks</h1>
+  <main>
+    <section class="hero compact" data-reveal>
+      <div class="hero-content">
+        <p class="eyebrow">Contact</p>
+        <h1>Let's Build Something Great</h1>
+        <p class="tagline">
+          Tell me about your idea, opportunity, or collaboration and I will respond quickly.
+        </p>
+      </div>
+      <div class="hero-card" data-reveal>
+        <div class="contact-block">
+          <p>166 Cornelius Rd. Cedartown GA</p>
+          <p>(678) 901-2227</p>
+          <p>slh56040@uga.edu</p>
+        </div>
+        <div class="quick-links">
+          <a href="https://www.linkedin.com/in/spencer-hicks-6376a93a7">LinkedIn</a>
+          <a href="https://aura-hub.tech">AURA Live</a>
+        </div>
+      </div>
+    </section>
 
-  <p class="address">
-    166 Cornelius Rd. Cedartown GA &#9776;
-    (678) 901-2227 &#9776;
-    slh56040@uga.edu
-  </p>
+    <section class="section" data-reveal>
+      <div class="section-heading">
+        <h2>Send a Message</h2>
+        <p>Your message goes directly to my inbox.</p>
+      </div>
+      <form class="contact-card" method="POST" action="https://formsubmit.co/spencerhicks06@gmail.com">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
 
-  <p class="tagline">
-    I am interested in expanding my knowledge pool in order to grow professionally and personally.
-  </p>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
-  <hr>
-<section class="one-col">
-  <form method="POST" action="https://formsubmit.co/spencerhicks06@gmail.com">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
 
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5"></textarea><br><br>
-
-    <button type="submit">Send</button>
-
-  </form>
-</section>
-  <footer>
-    <p>
-      <a href="index.html">Spencer Hicks  </a>
-    </p>
-    <p>
+  <footer class="site-footer">
+    <p>&copy; Spencer Hicks</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
       <a href="https://www.linkedin.com/in/spencer-hicks-6376a93a7">LinkedIn</a>
-    </p>
+    </div>
   </footer>
-
-   
+  <script src="js/main.js"></script>
   </body>
 </html>
