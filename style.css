@@ -197,9 +197,9 @@ img {
   border-radius: 24px;
   padding: 1rem 1rem 1.1rem;
   box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 180px) 1fr;
+  gap: 1rem;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -214,8 +214,8 @@ img {
 }
 
 .hero-card img {
-  width: min(200px, 100%);
-  aspect-ratio: 1 / 1.2;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   margin: 0;
   border-radius: 16px;
@@ -230,7 +230,7 @@ img {
   display: grid;
   gap: 0.2rem;
   color: var(--muted);
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 1;
 }
@@ -241,9 +241,23 @@ img {
   font-weight: 600;
   color: var(--primary-strong);
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .contact-block,
+  .quick-links {
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .btn {
