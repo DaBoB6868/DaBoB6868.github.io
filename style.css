@@ -324,6 +324,14 @@ img {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
 .project-card.highlight {
   grid-column: span 2;
   border: 1px solid rgba(210, 141, 92, 0.4);
@@ -361,6 +369,21 @@ img {
   gap: 1rem;
   font-weight: 600;
   color: var(--primary-strong);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-stack span {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(210, 141, 92, 0.12);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .cta {
