@@ -4,6 +4,7 @@ const revealItems = document.querySelectorAll("[data-reveal]");
 const copyButtons = document.querySelectorAll("[data-copy]");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
+const backToTop = document.querySelector(".back-to-top");
 
 const storedTheme = localStorage.getItem("theme");
 if (storedTheme) {
@@ -80,5 +81,36 @@ if (navToggle && navLinks) {
         navToggle.setAttribute("aria-expanded", "false");
       }
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (window.innerWidth > 720) {
+      return;
+    }
+    const target = event.target;
+    if (!(target instanceof Element)) {
+      return;
+    }
+    if (!navLinks.contains(target) && !navToggle.contains(target)) {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+if (backToTop) {
+  const toggleBackToTop = () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.add("is-visible");
+    } else {
+      backToTop.classList.remove("is-visible");
+    }
+  };
+
+  toggleBackToTop();
+  window.addEventListener("scroll", toggleBackToTop);
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
