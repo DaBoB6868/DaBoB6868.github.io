@@ -203,8 +203,12 @@ img {
 }
 
 .hero-card img {
-  border-radius: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.08);
+  width: min(180px, 100%);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid var(--border);
 }
 
 .contact-block {

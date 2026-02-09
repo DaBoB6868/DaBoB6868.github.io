@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Minesweeper project placeholder</title>
+  <desc id="desc">Abstract grid placeholder for the Minesweeper project</desc>
+  <rect width="1200" height="675" rx="48" fill="#1e4246" />
+  <g opacity="0.3" fill="#f7f2ea">
+    <rect x="140" y="140" width="120" height="120" rx="16" />
+    <rect x="300" y="140" width="120" height="120" rx="16" />
+    <rect x="460" y="140" width="120" height="120" rx="16" />
+    <rect x="620" y="140" width="120" height="120" rx="16" />
+    <rect x="140" y="300" width="120" height="120" rx="16" />
+    <rect x="300" y="300" width="120" height="120" rx="16" />
+    <rect x="460" y="300" width="120" height="120" rx="16" />
+    <rect x="620" y="300" width="120" height="120" rx="16" />
+  </g>
+  <text x="140" y="520" fill="#f7f2ea" font-family="Space Grotesk, Arial, sans-serif" font-size="46" font-weight="600">
+    Minesweeper
+  </text>
+  <text x="140" y="575" fill="#f7f2ea" font-family="Space Grotesk, Arial, sans-serif" font-size="22" opacity="0.8">
+    Classic logic game built in Java
+  </text>
+</svg>
